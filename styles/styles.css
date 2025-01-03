@@ -1,0 +1,161 @@
+/* Style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Corps et background */
+body {
+    background: linear-gradient(135deg, #1c1c1c, #3a3a3a);
+    color: #fff;
+    line-height: 1.6;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Container principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ff4081, #673ab7);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: headerAnim 2s ease-out;
+}
+
+.main-title {
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 5px;
+    animation: titleSlideIn 1.5s ease-out;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInUp 2s 1s forwards;
+}
+
+/* Section Fonctionnalités */
+#features {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    min-height: 400px;
+}
+
+#features h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Style des éléments de fonctionnalités */
+.feature {
+    background: linear-gradient(135deg, #333, #666);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style des images dans les fonctionnalités */
+.feature-img {
+    width: 100%; /* L'image prendra toute la largeur de la case */
+    height: 200px; /* Hauteur fixe de 200px */
+    object-fit: cover; /* L'image couvre la zone sans déformation */
+    border-radius: 8px; /* Arrondir légèrement les coins de l'image */
+    margin-bottom: 20px; /* Espacement sous l'image */
+}
+
+/* Effet de zoom au survol des fonctionnalités */
+.feature:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.feature p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Style du bouton de téléchargement dans le footer */
+.download-btn-footer {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #ff4081, #673ab7);
+    color: white;
+    font-size: 1.5em;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+    display: inline-block; /* Permet de l'aligner avec le texte */
+    margin-top: 20px; /* Décale légèrement du texte */
+}
+
+.download-btn-footer:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.2em;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Animations */
+@keyframes headerAnim {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes titleSlideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
